@@ -52,8 +52,8 @@ class UploadViewHelper extends AbstractViewHelper
     {
 
         $maximumSize = GeneralUtility::getMaxUploadFileSize() / 1024;
-        if (!empty($this->widgetConfiguration['maximumSize'])) {
-            $maximumSize = $this->widgetConfiguration['maximumSize'];
+        if (!empty($this->arguments['maximumSize'])) {
+            $maximumSize = $this->arguments['maximumSize'];
         }
 
         return $maximumSize;
@@ -69,10 +69,10 @@ class UploadViewHelper extends AbstractViewHelper
     {
 
         $maximumSize = GeneralUtility::getMaxUploadFileSize() * 1024;
-        if (!empty($this->widgetConfiguration['maximumSize'])) {
-            $maximumSize = $this->widgetConfiguration['maximumSize'];
+        if (!empty($this->arguments['maximumSize'])) {
+            $maximumSize = $this->arguments['maximumSize'];
 
-            if ($this->widgetConfiguration['sizeUnit'] === 'Ko') {
+            if ($this->arguments['sizeUnit'] === 'Ko') {
                 $maximumSize = $maximumSize * 1024;
             } else {
                 $maximumSize = $maximumSize * pow(1024, 2);
@@ -91,10 +91,10 @@ class UploadViewHelper extends AbstractViewHelper
     {
         $allowedExtensions = '';
 
-        if (!empty($this->widgetConfiguration['allowedExtensions'])) {
-            $allowedExtensions = GeneralUtility::trimExplode(',', $this->widgetConfiguration['allowedExtensions'], TRUE);
-        } elseif ($this->widgetConfiguration['storage'] > 0 && ExtensionManagementUtility::isLoaded('media')) {
-            $allowedExtensions = PermissionUtility::getInstance()->getAllowedExtensions($this->widgetConfiguration['storage']);
+        if (!empty($this->arguments['allowedExtensions'])) {
+            $allowedExtensions = GeneralUtility::trimExplode(',', $this->arguments['allowedExtensions'], TRUE);
+        } elseif ($this->arguments['storage'] > 0 && ExtensionManagementUtility::isLoaded('media')) {
+            $allowedExtensions = PermissionUtility::getInstance()->getAllowedExtensions($this->arguments['storage']);
         }
 
         // Format to be eventually consumed by JavaScript.

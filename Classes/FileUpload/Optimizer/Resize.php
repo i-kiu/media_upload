@@ -61,7 +61,7 @@ class Resize implements ImageOptimizerInterface
             $storageRecord = $this->storage->getStorageRecord();
         }
 
-        if (strlen($storageRecord['maximum_dimension_original_image'] ?? "") > 0) {
+        if (isset($storageRecord) && strlen($storageRecord['maximum_dimension_original_image'] ?? "") > 0) {
 
             /** @var Dimension $imageDimension */
             $imageDimension = GeneralUtility::makeInstance(Dimension::class, $storageRecord['maximum_dimension_original_image']);
