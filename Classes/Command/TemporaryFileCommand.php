@@ -1,7 +1,7 @@
 <?php
-namespace Ikiu\MediaUpload\Command;
+namespace Fab\MediaUpload\Command;
 
-use Ikiu\MediaUpload\FileUpload\UploadManager;
+use Fab\MediaUpload\FileUpload\UploadManager;
 use Symfony\Component\Console\Input\InputOption;
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Exception;
@@ -19,7 +19,7 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 /**
  * Class TemporaryFileCommand
  * @author Jörg Velletti <typo3@velletti.de>
- * @package Ikiu\MediaUpload\Command;
+ * @package Fab\MediaUpload\Command;
  */
 class TemporaryFileCommand extends Command {
 

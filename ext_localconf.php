@@ -25,11 +25,11 @@ call_user_func(function () {
         'media_upload',
         'Upload',
         array(
-            \Ikiu\MediaUpload\Controller\MediaUploadController::class => 'upload',
+            \Fab\MediaUpload\Controller\MediaUploadController::class => 'upload',
         ),
         // non-cacheable actions
         array(
-            \Ikiu\MediaUpload\Controller\MediaUploadController::class => 'upload',
+            \Fab\MediaUpload\Controller\MediaUploadController::class => 'upload',
         )
     );
 
@@ -37,11 +37,11 @@ call_user_func(function () {
         'media_upload',
         'Delete',
         array(
-            \Ikiu\MediaUpload\Controller\MediaUploadController::class => 'delete',
+            \Fab\MediaUpload\Controller\MediaUploadController::class => 'delete',
         ),
         // non-cacheable actions
         array(
-            \Ikiu\MediaUpload\Controller\MediaUploadController::class => 'delete',
+            \Fab\MediaUpload\Controller\MediaUploadController::class => 'delete',
         )
     );
     // command line is replaced by symphony command:

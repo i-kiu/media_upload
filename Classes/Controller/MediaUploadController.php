@@ -1,15 +1,15 @@
 <?php
-namespace Ikiu\MediaUpload\Controller;
+namespace Fab\MediaUpload\Controller;
 
 /*
- * This file is part of the Ikiu/MediaUpload project under GPLv2 or later.
+ * This file is part of the Fab/MediaUpload project under GPLv2 or later.
  *
  * For the full copyright and license information, please read the
  * LICENSE.md file that was distributed with this source code.
  */
 
-use Ikiu\MediaUpload\FileUpload\UploadManager;
-use Ikiu\MediaUpload\Utility\UuidUtility;
+use Fab\MediaUpload\FileUpload\UploadManager;
+use Fab\MediaUpload\Utility\UuidUtility;
 use Psr\Http\Message\ResponseInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use TYPO3\CMS\Core\Http\Dispatcher;

@@ -4,12 +4,12 @@ $EM_CONF[$_EXTKEY] = [
     'title' => 'Media Upload',
     'description' => 'Fluid widget for mass uploading files on the Frontend using HTML5 techniques powered by Fine Uploader - http://fineuploader.com/',
     'category' => 'fe',
-    'author' => 'Ikiuien Udriot',
-    'author_email' => 'Ikiuien@ecodev.ch',
+    'author' => 'Fabien Udriot',
+    'author_email' => 'fabien@ecodev.ch',
     'state' => 'stable',
     'version' => '3.0.3',
     'autoload' => [
-        'psr-4' => ['Ikiu\\MediaUpload\\' => 'Classes']
+        'psr-4' => ['Fab\\MediaUpload\\' => 'Classes']
     ],
     'constraints' =>
         [

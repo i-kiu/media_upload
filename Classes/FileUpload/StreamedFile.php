@@ -1,8 +1,8 @@
 <?php
-namespace Ikiu\MediaUpload\FileUpload;
+namespace Fab\MediaUpload\FileUpload;
 
 /*
- * This file is part of the Ikiu/MediaUpload project under GPLv2 or later.
+ * This file is part of the Fab/MediaUpload project under GPLv2 or later.
  *
  * For the full copyright and license information, please read the
  * LICENSE.md file that was distributed with this source code.
@@ -14,7 +14,7 @@ namespace Ikiu\MediaUpload\FileUpload;
  *
  * @see original implementation: https://github.com/valums/file-uploader/blob/master/server/php.php
  */
-class StreamedFile extends \Ikiu\MediaUpload\FileUpload\UploadedFileAbstract
+class StreamedFile extends \Fab\MediaUpload\FileUpload\UploadedFileAbstract
 {
 
     /**

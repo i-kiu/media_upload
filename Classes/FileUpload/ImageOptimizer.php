@@ -1,8 +1,8 @@
 <?php
-namespace Ikiu\MediaUpload\FileUpload;
+namespace Fab\MediaUpload\FileUpload;
 
 /*
- * This file is part of the Ikiu/MediaUpload project under GPLv2 or later.
+ * This file is part of the Fab/MediaUpload project under GPLv2 or later.
  *
  * For the full copyright and license information, please read the
  * LICENSE.md file that was distributed with this source code.
@@ -31,25 +31,25 @@ class ImageOptimizer implements SingletonInterface
     /**
      * Returns a class instance.
      *
-     * @return \Ikiu\MediaUpload\FileUpload\ImageOptimizer
+     * @return \Fab\MediaUpload\FileUpload\ImageOptimizer
      * @param \TYPO3\CMS\Core\Resource\ResourceStorage $storage
      */
     static public function getInstance($storage = NULL)
     {
-        return GeneralUtility::makeInstance('Ikiu\MediaUpload\FileUpload\ImageOptimizer', $storage);
+        return GeneralUtility::makeInstance('Fab\MediaUpload\FileUpload\ImageOptimizer', $storage);
     }
 
     /**
      * Constructor
      *
      * @param \TYPO3\CMS\Core\Resource\ResourceStorage $storage
-     *@return \Ikiu\MediaUpload\FileUpload\ImageOptimizer
+     *@return \Fab\MediaUpload\FileUpload\ImageOptimizer
      */
     public function __construct(\TYPO3\CMS\Core\Resource\ResourceStorage $storage = NULL)
     {
         $this->storage = $storage;
-        $this->add('Ikiu\MediaUpload\FileUpload\Optimizer\Resize');
-        $this->add('Ikiu\MediaUpload\FileUpload\Optimizer\Rotate');
+        $this->add('Fab\MediaUpload\FileUpload\Optimizer\Resize');
+        $this->add('Fab\MediaUpload\FileUpload\Optimizer\Rotate');
     }
 
     /**
@@ -88,7 +88,7 @@ class ImageOptimizer implements SingletonInterface
 
         foreach ($this->optimizers as $optimizer) {
 
-            /** @var $optimizer \Ikiu\MediaUpload\FileUpload\ImageOptimizerInterface */
+            /** @var $optimizer \Fab\MediaUpload\FileUpload\ImageOptimizerInterface */
             $optimizer = GeneralUtility::makeInstance($optimizer, $this->storage);
             $uploadedFile = $optimizer->optimize($uploadedFile);
         }

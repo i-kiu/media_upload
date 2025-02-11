@@ -1,17 +1,17 @@
 <?php
-namespace Ikiu\MediaUpload\FileUpload;
+namespace Fab\MediaUpload\FileUpload;
 
 /*
- * This file is part of the Ikiu/MediaUpload project under GPLv2 or later.
+ * This file is part of the Fab/MediaUpload project under GPLv2 or later.
  *
  * For the full copyright and license information, please read the
  * LICENSE.md file that was distributed with this source code.
  */
 
 use BadFunctionCallException;
-use Ikiu\Media\Utility\PermissionUtility;
-use Ikiu\MediaUpload\Utility\UploadUtility;
-use Ikiu\MediaUpload\Utility\UuidUtility;
+use Fab\Media\Utility\PermissionUtility;
+use Fab\MediaUpload\Utility\UploadUtility;
+use Fab\MediaUpload\Utility\UuidUtility;
 use FilesystemIterator;
 use InvalidArgumentException;
 use Normalizer;

@@ -1,8 +1,8 @@
 <?php
-namespace Ikiu\MediaUpload\FileUpload;
+namespace Fab\MediaUpload\FileUpload;
 
 /*
- * This file is part of the Ikiu/MediaUpload project under GPLv2 or later.
+ * This file is part of the Fab/MediaUpload project under GPLv2 or later.
  *
  * For the full copyright and license information, please read the
  * LICENSE.md file that was distributed with this source code.
@@ -74,7 +74,7 @@ interface UploadedFileInterface
      * Set the file input name from the DOM.
      *
      * @param string $inputName
-     * @return \Ikiu\MediaUpload\FileUpload\UploadedFileInterface
+     * @return \Fab\MediaUpload\FileUpload\UploadedFileInterface
      */
     public function setInputName($inputName);
 
@@ -82,7 +82,7 @@ interface UploadedFileInterface
      * Set the upload folder
      *
      * @param string $uploadFolder
-     * @return \Ikiu\MediaUpload\FileUpload\UploadedFileInterface
+     * @return \Fab\MediaUpload\FileUpload\UploadedFileInterface
      */
     public function setUploadFolder($uploadFolder);
 
@@ -90,7 +90,7 @@ interface UploadedFileInterface
      * Set the file name to be saved
      *
      * @param string $name
-     * @return \Ikiu\MediaUpload\FileUpload\UploadedFileInterface
+     * @return \Fab\MediaUpload\FileUpload\UploadedFileInterface
      */
     public function setName($name);
 }

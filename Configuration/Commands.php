@@ -2,6 +2,6 @@
 
 return [
     'mediaupload:removeTempFiles' => [
-        'class' => \Ikiu\MediaUpload\Command\TemporaryFileCommand::class,
+        'class' => \Fab\MediaUpload\Command\TemporaryFileCommand::class,
     ],
 ];

@@ -1,17 +1,17 @@
 <?php
-namespace Ikiu\MediaUpload\Service;
+namespace Fab\MediaUpload\Service;
 
 /*
- * This file is part of the Ikiu/MediaUpload project under GPLv2 or later.
+ * This file is part of the Fab/MediaUpload project under GPLv2 or later.
  *
  * For the full copyright and license information, please read the
  * LICENSE.md file that was distributed with this source code.
  */
 
-use Ikiu\MediaUpload\FileUpload\UploadManager;
+use Fab\MediaUpload\FileUpload\UploadManager;
 use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use Ikiu\MediaUpload\UploadedFile;
+use Fab\MediaUpload\UploadedFile;
 
 /**
  * Uploaded files service.

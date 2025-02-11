@@ -1,8 +1,8 @@
 <?php
-namespace Ikiu\MediaUpload\ViewHelpers\Widget;
+namespace Fab\MediaUpload\ViewHelpers\Widget;
 
 /*
- * This file is part of the Ikiu/MediaUpload project under GPLv2 or later.
+ * This file is part of the Fab/MediaUpload project under GPLv2 or later.
  *
  * For the full copyright and license information, please read the
  * LICENSE.md file that was distributed with this source code.
@@ -20,7 +20,7 @@ class ShowUploadedViewHelper extends AbstractViewHelper
 {
 
     public function __construct(
-        protected \Ikiu\MediaUpload\Service\UploadFileService $uploadFileService,
+        protected \Fab\MediaUpload\Service\UploadFileService $uploadFileService,
         protected \TYPO3\CMS\Core\View\ViewFactoryInterface $viewFactory,
     )
     { }

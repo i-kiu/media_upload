@@ -1,18 +1,18 @@
 <?php
-namespace Ikiu\MediaUpload\FileUpload\Optimizer;
+namespace Fab\MediaUpload\FileUpload\Optimizer;
 
 /*
- * This file is part of the Ikiu/MediaUpload project under GPLv2 or later.
+ * This file is part of the Fab/MediaUpload project under GPLv2 or later.
  *
  * For the full copyright and license information, please read the
  * LICENSE.md file that was distributed with this source code.
  */
 
-use Ikiu\Media\Module\MediaModule;
-use Ikiu\MediaUpload\Dimension;
+use Fab\Media\Module\MediaModule;
+use Fab\MediaUpload\Dimension;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use Ikiu\MediaUpload\FileUpload\ImageOptimizerInterface;
-use \Ikiu\MediaUpload\FileUpload\UploadedFileInterface;
+use Fab\MediaUpload\FileUpload\ImageOptimizerInterface;
+use \Fab\MediaUpload\FileUpload\UploadedFileInterface;
 use \TYPO3\CMS\Core\Resource\ResourceStorage;
 
 /**
@@ -46,7 +46,7 @@ class Resize implements ImageOptimizerInterface
      * Optimize the given uploaded image.
      *
      * @param UploadedFileInterface $uploadedFile
-     * @return \Ikiu\MediaUpload\FileUpload\UploadedFileInterface
+     * @return \Fab\MediaUpload\FileUpload\UploadedFileInterface
      * @throws \Exception
      * @throws \InvalidArgumentException
      */
