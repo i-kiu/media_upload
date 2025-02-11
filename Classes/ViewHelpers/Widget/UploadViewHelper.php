@@ -12,6 +12,7 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\View\ViewFactoryData;
 use TYPO3\CMS\Core\View\ViewFactoryInterface;
+use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 
@@ -23,10 +24,19 @@ class UploadViewHelper extends AbstractViewHelper
 
     protected $escapeOutput = false;
 
+    protected array $settings;
+
     public function __construct(
         protected ViewFactoryInterface $viewFactory,
+        ConfigurationManagerInterface $configurationManager
     )
-    { }
+    {
+        $this->settings = $configurationManager->getConfiguration(
+            ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK,
+            'MediaUpload',
+            'Upload'
+        );
+    }
 
     /**
      * @return void
@@ -114,9 +124,9 @@ class UploadViewHelper extends AbstractViewHelper
     {
         # generate a standalone view and render the template ViewHelpers/Widget/Upload/Index.html
         $viewFactoryData = new ViewFactoryData(
-            templateRootPaths: ['EXT:media_upload/Resources/Private/Templates'],
-            partialRootPaths: ['EXT:media_upload/Resources/Private/Partials'],
-            layoutRootPaths: ['EXT:media_upload/Resources/Private/Layouts'],
+            templateRootPaths: $this->settings["view"]["templateRootPaths"],
+            partialRootPaths: $this->settings["view"]["partialRootPaths"],
+            layoutRootPaths: $this->settings["view"]["layoutRootPaths"],
         );
 
         $view = $this->viewFactory->create($viewFactoryData);
