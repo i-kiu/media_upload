@@ -1,8 +1,8 @@
 <?php
-namespace Fab\MediaUpload\Utility;
+namespace Ikiu\MediaUpload\Utility;
 
 /*
- * This file is part of the Fab/MediaUpload project under GPLv2 or later.
+ * This file is part of the Ikiu/MediaUpload project under GPLv2 or later.
  *
  * For the full copyright and license information, please read the
  * LICENSE.md file that was distributed with this source code.
@@ -23,7 +23,7 @@ class UploadUtility implements SingletonInterface
      * @return UploadUtility
      * @throws \InvalidArgumentException
      */
-    static public function getInstance()
+    static public function getInstance(): UploadUtility
     {
         return GeneralUtility::makeInstance(self::class);
     }
@@ -33,7 +33,7 @@ class UploadUtility implements SingletonInterface
      *
      * @return bool
      */
-    public function hasValidContentType()
+    public function hasValidContentType(): bool
     {
         return isset($GLOBALS['_SERVER']['CONTENT_TYPE']);
     }
@@ -43,9 +43,9 @@ class UploadUtility implements SingletonInterface
      *
      * @return bool
      */
-    public function isMultiparted()
+    public function isMultiparted(): bool
     {
-        return strpos(strtolower($GLOBALS['_SERVER']['CONTENT_TYPE']), 'multipart/form-data') === 0;
+        return str_starts_with(strtolower($GLOBALS['_SERVER']['CONTENT_TYPE']), 'multipart/form-data');
     }
 
     /**
@@ -53,9 +53,9 @@ class UploadUtility implements SingletonInterface
      *
      * @return bool
      */
-    public function isUrlEncoded()
+    public function isUrlEncoded(): bool
     {
-        return strpos(strtolower($GLOBALS['_SERVER']['CONTENT_TYPE']), 'application/x-www-form-urlencoded') === 0;
+        return str_starts_with(strtolower($GLOBALS['_SERVER']['CONTENT_TYPE']), 'application/x-www-form-urlencoded');
     }
 
     /**
@@ -63,9 +63,9 @@ class UploadUtility implements SingletonInterface
      *
      * @return bool
      */
-    public function isOctetStreamed()
+    public function isOctetStreamed(): bool
     {
-        return strpos(strtolower($GLOBALS['_SERVER']['CONTENT_TYPE']), 'application/octet-stream') === 0;
+        return str_starts_with(strtolower($GLOBALS['_SERVER']['CONTENT_TYPE']), 'application/octet-stream');
     }
 
 }

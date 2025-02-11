@@ -1,14 +1,15 @@
 <?php
-namespace Fab\MediaUpload\FileUpload\Optimizer;
+namespace Ikiu\MediaUpload\FileUpload\Optimizer;
 
 /*
- * This file is part of the Fab/MediaUpload project under GPLv2 or later.
+ * This file is part of the Ikiu/MediaUpload project under GPLv2 or later.
  *
  * For the full copyright and license information, please read the
  * LICENSE.md file that was distributed with this source code.
  */
 
-use Fab\MediaUpload\FileUpload\ImageOptimizerInterface;
+use Ikiu\MediaUpload\FileUpload\ImageOptimizerInterface;
+use \Ikiu\MediaUpload\FileUpload\UploadedFileInterface;
 
 /**
  * Class that optimize an image according to some settings.
@@ -22,7 +23,7 @@ class Rotate implements ImageOptimizerInterface
     protected $gifCreator;
 
     /**
-     * @return \Fab\MediaUpload\FileUpload\Optimizer\Rotate
+     * @return \Ikiu\MediaUpload\FileUpload\Optimizer\Rotate
      */
     public function __construct()
     {
@@ -34,10 +35,10 @@ class Rotate implements ImageOptimizerInterface
     /**
      * Optimize the given uploaded image
      *
-     * @param \Fab\MediaUpload\FileUpload\UploadedFileInterface $uploadedFile
-     * @return \Fab\MediaUpload\FileUpload\UploadedFileInterface
+     * @param UploadedFileInterface $uploadedFile
+     * @return \Ikiu\MediaUpload\FileUpload\UploadedFileInterface
      */
-    public function optimize($uploadedFile)
+    public function optimize(UploadedFileInterface $uploadedFile): UploadedFileInterface
     {
 
         $orientation = $this->getOrientation($uploadedFile->getFileWithAbsolutePath());
