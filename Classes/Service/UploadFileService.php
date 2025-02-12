@@ -11,7 +11,7 @@ namespace Fab\MediaUpload\Service;
 use Fab\MediaUpload\FileUpload\UploadManager;
 use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use Fab\MediaUpload\UploadedFile;
+use Fab\MediaUpload\FileUpload\UploadedFile;
 
 /**
  * Uploaded files service.
